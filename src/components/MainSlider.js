@@ -7,9 +7,7 @@ const MainSlider = () => {
   const [ slides, setSlides ] = useState([])
 
   useEffect(() => {
-    console.log('inicia el component did mount')
     getData()
-    console.log('termina el component did mount')
   },[])
 
   const getData = async () => {

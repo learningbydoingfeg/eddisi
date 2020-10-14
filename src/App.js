@@ -9,9 +9,9 @@ function App() {
   const [ brands, setBrand ] = useState([])
 
   useEffect(() => {
-
+    console.log('component app did mpunt')
     getData()
-    
+    console.log('component app  mpounted')
   },[])
 
   const getData = async () => {
@@ -22,7 +22,6 @@ function App() {
     })
 
     setBrand(result.data[0])
-    
   }
 
   return (
