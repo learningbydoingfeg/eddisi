@@ -1,9 +1,30 @@
-import React from 'react';
-import MainSlider from './components/MainSlider'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
+import MainSlider from './components/MainSlider'
+import Footer from './components/Footer'
 
 
 function App() {
+  const [ brands, setBrand ] = useState([])
+
+  useEffect(() => {
+
+    getData()
+    
+  },[])
+
+  const getData = async () => {
+    let result = await axios({
+      method:'GET',
+      baseURL:'https://sheltered-beyond-22922.herokuapp.com',
+      url:'/brands'
+    })
+
+    setBrand(result.data[0])
+    
+  }
+
   return (
     <>
     <div className="preloader">
@@ -30,53 +51,7 @@ function App() {
   <div id="canvas">
     <div id="box_wrapper">
       
-      <section className="page_topline ds table_section table_section_lg section_padding_top_15 section_padding_bottom_15 columns_margin_0">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-6 text-center text-lg-left hidden-xs">
-              <div className="inline-content big-spacing">
-                <div className="page_social"> <a className="social-icon socicon-facebook" href="#" title="Facebook"></a> <a className="social-icon socicon-twitter" href="#" title="Twitter"></a> <a className="social-icon socicon-google" href="#" title="Google Plus"></a> <a className="social-icon socicon-linkedin"
-                      href="#" title="Linkedin"></a> <a className="social-icon socicon-youtube" href="#" title="Youtube"></a> </div> <span className="xs-block">
-            <i className="fa fa-clock-o highlight3 rightpadding_5" aria-hidden="true"></i>
-            Mon-Fri: 9:00-19:00; Sat: 10:00-17:00; Sun: Closed
-          </span> </div>
-            </div>
-            <div className="col-lg-6 text-center text-lg-right">
-              <div id="topline-animation-wrap">
-                <div id="topline-hide" className="inline-content big-spacing"> <span className="hidden-xs">
-              <i className="fa fa-map-marker highlight3 rightpadding_5" aria-hidden="true"></i>
-              73 Harvey Forest Suite, New York
-            </span> <span className="greylinks hidden-xs">
-              <i className="fa fa-pencil highlight3 rightpadding_5" aria-hidden="true"></i>
-              <a href="mailto:diversify@example.com">diversify@example.com</a>
-            </span>
-                  <div className="xs-block">
-                    <ul className="inline-list menu greylinks">
-                      <li> <a href="#0">
-                    <i className="fa fa-user" aria-hidden="true"></i>
-                  </a> </li>
-                      <li> <a href="#0">
-                    <i className="fa fa-shopping-cart" aria-hidden="true"></i>
-                  </a> </li>
-                      <li className="dropdown"> <a id="search-show" href="./">
-                    <i className="fa fa-search"></i>
-                  </a> </li>
-                    </ul>
-                  </div>
-                </div>
-                <div id="topline-show" className="widget widget_search">
-                  <form method="get" className="searchform inline-form" action="./">
-                    <div className="form-group-wrap">
-                      <div className="form-group"> <label className="sr-only" htmlFor="topline-widget-search">Search for:</label> <input id="topline-widget-search" type="text" defaultValue="" name="search" className="form-control" placeholder="Enter Keyword..."/> <a href="./" id="search-close">
-                  <i className="fa fa-close"></i>
-                </a> </div> <button type="submit" className="theme_button no_bg_button color1">ok</button> </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       <header className="page_header header_white toggler_xs_right columns_margin_0">
         <div className="container-fluid">
           <div className="row">
@@ -691,83 +666,7 @@ function App() {
           </div>
         </div>
       </section>
-      <footer className="page_footer template_footer ds ms parallax overlay_color section_padding_top_110 section_padding_bottom_100 columns_padding_25">
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12">
-              <div id="subscribe" className="widget widget_mailchimp with_padding cs main_color2 parallax overlay_color topmargin_0">
-                <h3 className="widget-title">Our Newsletter</h3>
-                <form className="signup" action="./" method="get">
-                  <div className="form-group-wrap">
-                    <div className="form-group"> <label htmlFor="mailchimp" className="sr-only">Enter your email here</label> <input name="email" type="email" id="mailchimp" className="mailchimp_email form-control text-center" placeholder="Your Email Address"/> </div> <button type="submit" className="theme_button color2">Subscribe now</button>                    </div>
-                  <div className="response"></div>
-                </form>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-6 col-xs-12 col-md-push-4 text-center">
-              <div className="widget widget_text widget_about">
-                <div className="logo logo_with_text bottommargin_10"> <img src="images/logo.png" alt=""/> <span className="logo_text">
-                            Diversify
-                            <small className="highlight4">lgbt community center</small>
-                        </span> </div>
-                <p>The mission of Our Community Center is to enhance and sustain the health and well-being of the lesbian, gay, bisexual, transgender.</p>
-                <p className="topmargin_25"> <a className="social-icon border-icon rounded-icon socicon-facebook" href="#" title="Facebook"></a> <a className="social-icon border-icon rounded-icon socicon-twitter" href="#" title="Twitter"></a> <a className="social-icon border-icon rounded-icon socicon-google"
-                      href="#" title="Google Plus"></a> <a className="social-icon border-icon rounded-icon socicon-linkedin" href="#" title="Linkedin"></a> <a className="social-icon border-icon rounded-icon socicon-youtube" href="#" title="Youtube"></a> </p>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-6 col-xs-12 col-md-pull-4 text-center">
-              <div className="widget widget_text">
-                <h3 className="widget-title">Our Contacts</h3>
-                <ul className="list-unstyled greylinks">
-                  <li className="media"> <i className="fa fa-map-marker highlight rightpadding_5" aria-hidden="true"></i> 73 Harvey Forest Suite, New York </li>
-                  <li className="media"> <i className="fa fa-phone highlight rightpadding_5" aria-hidden="true"></i> 8 (800) 923 4567 (operator) </li>
-                  <li className="media"> <i className="fa fa-pencil highlight rightpadding_5" aria-hidden="true"></i> <a href="mailto:diversify@example.com">diversify@example.com</a> </li>
-                  <li className="media"> <i className="fa fa-clock-o highlight rightpadding_5" aria-hidden="true"></i> Mon-Fri: 9:00-19:00, Sat: 10:00-17:00 </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-6 col-xs-12 hidden-xs hidden-sm text-center">
-              <div className="widget widget_recent_posts">
-                <h3 className="widget-title">Recent Blogs</h3>
-                <ul className="list-unstyled greylinks">
-                  <li>
-                    <p> <a href="blog-single-left.html">Leberkas beef kielbasa kevin turkey chicken alcatra. Ground round chicken.</a> </p>
-                    <div className="entry-meta inline-content greylinks"> <span>
-                  <i className="fa fa-calendar highlight3 rightpadding_5" aria-hidden="true"></i>
-                  <a href="blog-single-right.html">
-                    <time dateTime="2017-10-03T08:50:40+00:00">
-                    17 jan, 2018</time>
-                  </a>
-                </span> <span>
-                  <i className="fa fa-user highlight3 rightpadding_5" aria-hidden="true"></i>
-                  <a href="blog-right.html">Admin</a>
-                </span> <span className="categories-links">
-                  <i className="fa fa-tags highlight3 rightpadding_5" aria-hidden="true"></i>
-                  <a href="blog-right.html">lgbt</a>
-                </span> </div>
-                  </li>
-                  <li>
-                    <p> <a href="blog-single-left.html">Ball tip leberkas salami jowl ham pork  tri-tip tail.</a> </p>
-                    <div className="entry-meta inline-content greylinks"> <span>
-                  <i className="fa fa-calendar highlight3 rightpadding_5" aria-hidden="true"></i>
-                  <a href="blog-single-right.html">
-                    <time dateTime="2017-10-03T08:50:40+00:00">
-                    17 jan, 2018</time>
-                  </a>
-                </span> <span>
-                  <i className="fa fa-user highlight3 rightpadding_5" aria-hidden="true"></i>
-                  <a href="blog-right.html">Admin</a>
-                </span> <span className="categories-links">
-                  <i className="fa fa-tags highlight3 rightpadding_5" aria-hidden="true"></i>
-                  <a href="blog-right.html">Serivces</a>
-                </span> </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer facebookLink={brands.facebook} />
       <section className="ds ms parallax page_copyright overlay_color section_padding_top_30 section_padding_bottom_30">
         <div className="container">
           <div className="row">
