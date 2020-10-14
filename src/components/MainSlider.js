@@ -27,7 +27,7 @@ const MainSlider = () => {
           <ul className="slides">
             {slides.map((slide)=> {
               return(
-                <Slide key={slide.id}/>
+                <Slide key={slide.id} slideId={slide.id}/>
               )
             })}
           </ul>

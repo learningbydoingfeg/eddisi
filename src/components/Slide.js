@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Slide = (props) => {
-  const { key } = props
+  const { slideId } = props
   return (
-    <li key>
+    <li key={slideId}>
       <div className="slide-image-wrap"> <img src="images/slide01.jpg" alt="" /> </div>
       <div className="container">
         <div className="row">
