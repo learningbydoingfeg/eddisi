@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 
 const Footer = (props) => {
   
-  const { facebookLink } = props
+  const { facebookLink, logourl, pitchText } = props
 
   return (
     <footer className="page_footer template_footer ds ms parallax overlay_color section_padding_top_110 section_padding_bottom_100 columns_padding_25">
@@ -21,11 +21,11 @@ const Footer = (props) => {
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12 col-md-push-4 text-center">
               <div className="widget widget_text widget_about">
-                <div className="logo logo_with_text bottommargin_10"> <img src="images/logo.png" alt=""/> <span className="logo_text">
+                <div className="logo logo_with_text bottommargin_10"> <img src={ logourl } alt=""/> <span className="logo_text">
                             Diversify
                             <small className="highlight4">lgbt community center</small>
                         </span> </div>
-                <p>The mission of Our Community Center is to enhance and sustain the health and well-being of the lesbian, gay, bisexual, transgender.</p>
+                <p>{ pitchText }</p>
                 <p className="topmargin_25"> 
                 <a className="social-icon border-icon rounded-icon socicon-facebook" href={facebookLink} title="Facebook" target="_blank"></a> 
                 <a className="social-icon border-icon rounded-icon socicon-twitter" href="#" title="Twitter"></a> 
