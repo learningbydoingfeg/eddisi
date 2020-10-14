@@ -26,8 +26,12 @@ const Footer = (props) => {
                             <small className="highlight4">lgbt community center</small>
                         </span> </div>
                 <p>The mission of Our Community Center is to enhance and sustain the health and well-being of the lesbian, gay, bisexual, transgender.</p>
-                <p className="topmargin_25"> <a className="social-icon border-icon rounded-icon socicon-facebook" href={facebookLink} title="Facebook" target="_blank"></a> <a className="social-icon border-icon rounded-icon socicon-twitter" href="#" title="Twitter"></a> <a className="social-icon border-icon rounded-icon socicon-google"
-                      href="#" title="Google Plus"></a> <a className="social-icon border-icon rounded-icon socicon-linkedin" href="#" title="Linkedin"></a> <a className="social-icon border-icon rounded-icon socicon-youtube" href="#" title="Youtube"></a> </p>
+                <p className="topmargin_25"> 
+                <a className="social-icon border-icon rounded-icon socicon-facebook" href={facebookLink} title="Facebook" target="_blank"></a> 
+                <a className="social-icon border-icon rounded-icon socicon-twitter" href="#" title="Twitter"></a> 
+                <a className="social-icon border-icon rounded-icon socicon-google" href="#" title="Google Plus"></a> 
+                <a className="social-icon border-icon rounded-icon socicon-linkedin" href="#" title="Linkedin"></a> 
+                <a className="social-icon border-icon rounded-icon socicon-youtube" href="#" title="Youtube"></a> </p>
               </div>
             </div>
             <div className="col-md-4 col-sm-6 col-xs-12 col-md-pull-4 text-center">
