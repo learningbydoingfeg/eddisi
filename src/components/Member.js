@@ -4,7 +4,7 @@ const Member = (props) => {
   let { fname, lname, position, picture } = props
   return (
     <article className="vertical-item content-padding big-padding with_border bottom_color_border text-center">
-      <div className="item-media"> <img src={picture} alt="" /> </div>
+      <div className="item-media"> <img src={picture} alt={`${fname}-${lname}`} /> </div>
       <div className="item-content">
         <header className="entry-header">
           <h3 className="entry-title small bottommargin_0"> <a href="team-single.html">{fname} {lname}</a> </h3> <span className="small-text highlight">{position}</span> </header>

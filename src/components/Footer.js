@@ -27,7 +27,7 @@ const Footer = (props) => {
                         </span> </div>
                 <p>{ pitchText }</p>
                 <p className="topmargin_25"> 
-                <a className="social-icon border-icon rounded-icon socicon-facebook" href={facebookLink} title="Facebook" target="_blank"></a> 
+                <a className="social-icon border-icon rounded-icon socicon-facebook" href={facebookLink} title="Facebook" target="_blank" rel="noopener"></a> 
                 <a className="social-icon border-icon rounded-icon socicon-twitter" href="#" title="Twitter"></a> 
                 <a className="social-icon border-icon rounded-icon socicon-google" href="#" title="Google Plus"></a> 
                 <a className="social-icon border-icon rounded-icon socicon-linkedin" href="#" title="Linkedin"></a> 
