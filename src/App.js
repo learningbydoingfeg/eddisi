@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import './App.css'
+
 import Header from './components/Header'
 
 import Home from './pages/Home'
@@ -20,16 +20,24 @@ function App() {
   useEffect(() => {
     
     // const script = document.createElement("script");
-    //     script.src = "/vendor/jquery-validation/jquery.validate.min.js";
-    //     script.src = "/js/";
-    //     script.async = true;
-    //     document.body.appendChild(script);
+    //     script.src = "js/vendor/modernizr-2.6.2.min.js";
+    //     script.async = false;
+    //     document.head.appendChild(script);
 
-    // const script = document.createElement("script");
-    //     script.src = "/vendor/bootstrap.min.js";
-    //     script.src = "/js/";
+    // const script2 = document.createElement("script");
+    //     script.src = "/js/compressed.js";
     //     script.async = true;
-    //     document.body.appendChild(script);
+    //     document.body.appendChild(script2);
+
+        // const script3 = document.createElement("script");
+        // script.src = "/js/selectize.js";
+        // script.async = true;
+        // document.body.appendChild(script3);  
+
+        // const script4 = document.createElement("script");
+        // script.src = "js/main.js";
+        // script.async = true;
+        // document.body.appendChild(script4);  
     
       getBrandData()
   },[])
